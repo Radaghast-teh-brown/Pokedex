@@ -1,0 +1,14 @@
+type Query {
+    pegaPokemon: [Pokemon]
+    pegaPokemonPorId(id : Int!): Pokemon
+
+}
+
+type Mutation {
+    inserirPokemon(id: Int, nome: String, tipo: String): Pokemon
+}
+type Pokemon {
+    id: ID!
+    nome: String
+    tipo: String
+}
