@@ -6,18 +6,21 @@ import lombok.*;
 
 import javax.persistence.*;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
+
 @Entity
-@Table
+@Table(name = "pokemon")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Pokemon {
     @Id
     @Column
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column
+    @Column(name="nome")
     private String nome;
-    @Column
+    @Column(name="tipo")
     private String tipo;
 }
