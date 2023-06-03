@@ -10,6 +10,5 @@ import java.util.List;
 @Repository
     public interface PokemonRepository extends JpaRepository<Pokemon, Integer> {
 
-
     }
 
